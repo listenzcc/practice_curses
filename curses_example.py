@@ -25,6 +25,7 @@ def main(stdscr):
         stdscr.addstr(y, x, key, attrs[key])
         y += 1
 
+    curses.init_pair(1, curses.COLOR_RED, 0)
     if curses.has_colors():
         for j in [1, 2, 3]:
             stdscr.addstr(y, x, 'COLOR', curses.color_pair(j))
